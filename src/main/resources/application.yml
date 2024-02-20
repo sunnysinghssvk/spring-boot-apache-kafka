@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+# DB Configuration
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kafka
+    username: root
+    password: MySQL@123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application:
+    name: spring-boot-apache-kafka
