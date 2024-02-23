@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 @Log4j2
 @RequiredArgsConstructor
 public class KafkaProducer<T> {
-    @Value("${spring.kafka.topic}")
+    @Value("${topic-name.string}")
     private String topic;
-    @Value("${spring.kafka.json-topic}")
+    @Value("${topic-name.json}")
     private String jsonTopic;
     private final KafkaTemplate<String, String> kafkaStringTemplate;
     private final KafkaTemplate<String, T> kafkaTemplate;

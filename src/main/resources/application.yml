@@ -1,7 +1,10 @@
 server:
   port: 8080
 
-# DB Configuration
+topic-name:
+  string: string-topic
+  json: json-topic
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -14,3 +17,9 @@ spring:
     show-sql: true
   application:
     name: spring-boot-apache-kafka
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: group_id
+    producer:
+      bootstrap-servers: localhost:9092

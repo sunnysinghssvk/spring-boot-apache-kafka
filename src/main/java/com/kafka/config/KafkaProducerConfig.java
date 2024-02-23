@@ -66,7 +66,6 @@ public class KafkaProducerConfig {
      * @return
      * @param <T>
      */
-    @Primary
     @Bean
     public <T> KafkaTemplate<String, String> kafkaStringTemplate() {
         return new KafkaTemplate<>(producerStringFactory());

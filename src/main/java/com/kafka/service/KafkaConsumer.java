@@ -25,7 +25,7 @@ public class KafkaConsumer {
      * Consume String Message and save it to DB
      * @param message
      */
-    @KafkaListener(topics = {"${spring.kafka.topic}"}, containerFactory = "kafkaListenerStringFactory", groupId = "group_id")
+    @KafkaListener(topics = {"${topic-name.string}"}, containerFactory = "kafkaListenerStringFactory", groupId = "group_id")
     public void consumeStringMessage(String message) {
         log.info("Consumed String message: {}", message);
         try {
@@ -44,7 +44,7 @@ public class KafkaConsumer {
      * Consume JSON Message and save it to DB
      * @param employee
      */
-    @KafkaListener(topics = {"${spring.kafka.json-topic}"}, containerFactory = "kafkaListenerJsonFactory", groupId = "group_id")
+    @KafkaListener(topics = {"${topic-name.json}"}, containerFactory = "kafkaListenerJsonFactory", groupId = "group_id")
     public void consumeJsonMessage(Employee employee) {
         log.info("Consumed Json Message: {}", employee);
         try {
